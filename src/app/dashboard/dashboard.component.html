@@ -1,0 +1,19 @@
+<h2>Top Heroes</h2>
+
+<div *ngIf="ShowList">
+	<div *ngFor="let hero of herolist">
+		<h4>{{hero.id }}</h4>
+		<div>
+			<button (click)="HeroClick(hero)">{{hero.name | titlecase}}</button>
+		</div>
+	</div>
+</div>
+
+
+<div *ngIf="heroselected">
+	<form #heroform="ngForm" (ngSubmit)="UpdateHero(heroform)">
+		Name:<input type="text" [(ngModel)]="selectedhero.name" name="name"
+   #name="ngModel" >
+		<button type="submit">Submit</button>
+	</form>
+</div>

@@ -1,0 +1,17 @@
+<!-- <hello name="{{ name }}"></hello> -->
+<h1>
+	Heroes App
+</h1>
+
+
+<nav>
+	<button (click)="Dash_Click()">Dashboard</button> |
+	<button (click)="Heroes_Click()">Heroes</button>
+</nav>
+
+<div *ngIf="sh_dashboard">
+	<app-dashboard></app-dashboard>
+</div>
+<div *ngIf="sh_heroes">
+	<app-heroes></app-heroes>
+</div>
