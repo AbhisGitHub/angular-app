@@ -6,7 +6,7 @@ import { Component, VERSION } from "@angular/core";
 })
 export class AppComponent {
   name = "Angular " + VERSION.major;
-  sh_dashboard: boolean = false;
+  sh_dashboard: boolean = true;
   sh_heroes: boolean = false;
   constructor() {}
 
