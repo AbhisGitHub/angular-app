@@ -5,8 +5,8 @@
 	<div *ngIf="ShowList" class="form-group">
 		<div *ngFor="let hero of herolist" class="card">
 			<div class="card-body">
-				<h6>{{hero.id }}</h6>
-				<button (click)="HeroClick(hero)"class="btn btn-outline-dark">{{hero.name | titlecase}}</button>
+				<h6>{{hero.power }}</h6>
+				<button (click)="HeroClick(hero)"class="btn btn-outline-primary">{{hero.name | titlecase}}</button>
 			</div>
 		</div>
 	</div>
@@ -18,7 +18,7 @@
 				Name:<input type="text" [(ngModel)]="selectedhero.name" name="name"
    #name="ngModel" class="form-control" >
 			</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-outline-success">Update</button>
 		</form>
 	</div>
 
